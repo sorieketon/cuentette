@@ -4,17 +4,26 @@ public class Idioma {
 
 	public static String idioma() {
 		String idioma = null;
-		int coso = 0;
+		String coso = "";
 		coso = Valor.leervalor();
 
-		if (coso == 1) {
+		switch (coso) {
+		case "1":
 			idioma = "story_en.properties";
-		}
-		if (coso == 2) {
+
+			break;
+		case "2":
 			idioma = "story_it.properties";
-		}
-		if (coso == 3) {
+
+			break;
+		case "3":
 			idioma = "story_es.properties";
+
+			break;
+
+		default:
+			throw new NumeroNoUtil();
+
 		}
 
 		return idioma;
